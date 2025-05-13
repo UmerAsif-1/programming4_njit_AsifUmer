@@ -1,0 +1,53 @@
+/* Styling for the body element */
+
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif; /* Font family */
+    margin: 0; /* Remove default margin */
+}
+
+/* Styling for the header element */
+header {
+    background-color: #010005; /* Black background */
+    color: rgb(8, 5, 5); /* White text color */
+    padding: 20px; /* Padding around the header */
+ 
+}
+/* Styling for the main content area */
+main {
+    padding: 20px; /* Padding around the main content */
+    background-color: white; /* White background for main content */
+    margin: 20px; /* Margin around the main content */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styling for div elements */
+div {
+    margin-bottom: 20px; /* Margin at the bottom of div elements */
+}
+
+/* Styling for h1 elements */
+h1 {
+    color: #f70303; /* Red text color */
+    font-size: 24px; /* Font size */
+}
+
+/* Styling for h2 elements */
+h2 {
+    color: #5c42f2; /* Blue text color */
+    font-size: 20px; /* Font size */
+}
+
+/* Styling for p elements */
+p {
+    color: #333; /* Dark gray text color */
+    font-size: 16px; /* Font size */
+}
+
+/* Styling for nav elements */
+nav {
+    background-color: #f7f7f9; /* Blue background */
+    color: white; /* White text color */
+    padding: 10px; /* Padding around the navigation */
+    border-radius: 5px; /* Rounded corners */
+}
