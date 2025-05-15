@@ -3,50 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Observation</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+    <title>Sky Observation Portal</title>
+    <link rel="stylesheet" href="coursework/css/style.css">
+</head>
 <body>
-
     <header>
-        <img src = "https://example.com/logo.png" alt="Logo" width="100" height="100">
+        <img src="coursework/images/mylogo.jpg" alt="Logo" width="100" height="100">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#observations">Observations</a></li>
+                <li><a href="#add">Add Observation</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#" id="logout-link" style="display:none;">Logout</a></li>
             </ul>
-            <h1>Astro Observation</h1>
-            <p>Explore the wonders of the universe with us!</p>
         </nav>
+        <h1>Astro Observation Portal</h1>
     </header>
-
     <main>
-        <div>
-            <h2>
-                Recent Observations
-            </h2>
-            <p>
-                Discover the latest findings from our team of astronomers. We are dedicated to bringing you the most up-to-date information on celestial events and discoveries.
-            </p>
-            <p>
-               <a href="observation.html">View Details</a>
-            </p>
-        </div>
-        <div>
-            <h2>
-                About This Website
-            </h2>
-            <p>
-                This website is dedicated to sharing knowledge and insights about astronomy. Our goal is to make the wonders of the universe accessible to everyone.
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Astro Observation. All rights reserved.</p>
-        <p>Follow us on social media:</p>
-        
-    </footer>
+    <section id="home">
+        <h2>Welcome to Astro Observation Portal</h2>
+        <p>Track and share your sky observations with coordinates and descriptions. Login required to view or add entries.</p>
+    </section>
 
-    </body>
+    <section id="register" style="display:none;">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Enter username" required><br>
+            <input type="password" id="registerPassword" placeholder="Enter password" required><br>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="login" style="display:none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Enter username" required><br>
+            <input type="password" id="loginPassword" placeholder="Enter password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <section id="observations" style="display:none">
+        <h2>All Observations</h2>
+        <div id="searchOptions">
+            <input type="text" id="searchName" placeholder="Search by Name">
+            <input type="date" id="searchDateFrom" placeholder="Date From">
+            <input type="date" id="searchDateTo" placeholder="Date To">
+            <input type="text" id="searchOwner" placeholder="Search by Owner">
+            <button id="searchButton">Search</button>
+        </div>
+        <div id="observationList"></div>
+         <div id="pagination">
+            <button id="prevPage" disabled>Previous</button>
+            <span id="pageInfo">Page: 1</span>
+            <button id="nextPage">Next</button>
+        </div>
+    </section>
+
+    <section id="add" style="display:none">
+        <h2>Add Observation</h2>
+        <form id="observationForm">
+            <input type="text" id="obsName" placeholder="Observation Name" required><br>
+            <input type="text" id="nickname" placeholder="Your Nickname" required><br>
+            <textarea id="description" placeholder="Observation Description" required></textarea><br>
+            <input type="text" id="declination" placeholder="Declination" required><br>
+            <input type="text" id="rightAscension" placeholder="Right Ascension" required><br>
+            <input type="text" id="locationName" placeholder="Location Name" required><br>
+            <input type="text" id="coordinates" placeholder="Coordinates (lat,long)" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="edit" style="display:none">
+        <h2>Edit Observation</h2>
+        <form id="editObservationForm">
+            <input type="hidden" id="editObsId">
+            <input type="text" id="editObsName" placeholder="Observation Name" required><br>
+            <input type="text" id="editNickname" placeholder="Your Nickname" required><br>
+            <textarea id="editDescription" placeholder="Observation Description" required></textarea><br>
+            <input type="text" id="editDeclination" placeholder="Declination" required><br>
+            <input type="text" id="editRightAscension" placeholder="Right Ascension" required><br>
+            <input type="text" id="editLocationName" placeholder="Location Name" required><br>
+            <input type="text" id="editCoordinates" placeholder="Coordinates (lat,long)" required><br>
+            <input type="text" id="editReason" placeholder="Reason for edit"><br>
+            <button type="submit">Update Observation</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Astro Observation Portal. All rights reserved.</p>
+        </footer>
+
+    <script src="coursework/scripts/script.js"></script>
+</body>
 </html>
